@@ -1,4 +1,4 @@
-import { Box, Flex, Spacer, Text } from '@chakra-ui/react';
+import { Box, Circle, Flex, Spacer, Text } from '@chakra-ui/react';
 import { rankingMockData } from 'mock/ranking';
 
 const RankingPage = () => {
@@ -7,15 +7,21 @@ const RankingPage = () => {
       {rankingMockData.map(userData => {
         return (
           <Flex key={userData.id}>
+            <Circle bg='#6370EB' size='50px' color='white'>
+              <Text as='b' fontSize={'3xl'}>
+                {userData.rank}
+              </Text>
+            </Circle>
             <Box>
-              <Text>{userData.rank}</Text>
-            </Box>
-            <Box>
-              <Text>{userData.name}</Text>
+              <Text as='b' fontSize={'3xl'}>
+                {userData.name}
+              </Text>
             </Box>
             <Spacer />
             <Box>
-              <Text>{userData.rate}</Text>
+              <Text as='b' fontSize={'3xl'}>
+                {userData.rate}
+              </Text>
             </Box>
           </Flex>
         );
