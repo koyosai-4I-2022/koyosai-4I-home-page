@@ -6,7 +6,7 @@ const RankingPage = () => {
     <Box>
       {rankingMockData.map(userData => {
         return (
-          <Flex key={userData.id}>
+          <Flex key={userData.id} alignItems='center'>
             <Circle bg='#6370EB' size='50px' color='white'>
               <Text as='b' fontSize={'3xl'}>
                 {userData.rank}
