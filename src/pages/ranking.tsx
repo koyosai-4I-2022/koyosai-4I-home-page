@@ -1,10 +1,17 @@
 import { Box, Circle, Flex, Spacer, Text } from '@chakra-ui/react';
 import { rankingMockData } from 'mock/ranking';
+import { Ranking } from 'type/ranking';
+import useSWR from 'swr';
+
+import { fetcher } from 'fetcher';
 
 const RankingPage = () => {
+  const { data, error } = useSWR<Ranking[]>('ranking', fetcher);
+  if (error) return 'error';
+  if (!data) return 'Loading...';
   return (
     <Box>
-      {rankingMockData.map(userData => {
+      {data.map(userData => {
         return (
           <Flex key={userData.id} alignItems='center'>
             <Circle bg='#6370EB' size='50px' color='white'>
