@@ -1,7 +1,6 @@
 import { Box, Circle, Flex, Spacer, Text, Button,} from '@chakra-ui/react';
 import { Input, InputGroup,InputRightElement} from '@chakra-ui/react'
 import {SearchIcon} from '@chakra-ui/icons'
-import { rankingMockData } from 'mock/ranking';
 import { Ranking } from 'type/ranking';
 import useSWR from 'swr';
 
@@ -17,8 +16,11 @@ const RankingPage = () => {
         <Input
           placeholder='名前を入力してください'
         />
-        <InputRightElement width='4.5rem' children={<Button h='1.75rem' bg='white' size='lg'  onClick={()=>{return}}>
-          <SearchIcon color='#6370EB'/></Button>}/>
+        <InputRightElement width='4.5rem' >
+          <Button h='1.75rem' bg='white' size='lg'  onClick={()=>{return}}>
+            <SearchIcon color='#6370EB'/>
+          </Button>
+        </InputRightElement>
       </InputGroup>
       {data.map(userData => {
         return (
