@@ -7,9 +7,12 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerOverlay,
+  Flex,
+  Image,
   List,
   ListIcon,
   ListItem,
+  Spacer,
   useDisclosure,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
@@ -24,15 +27,26 @@ export const Layout = ({ children }: Props) => {
   return (
     <>
       <Box position={'relative'}>
-        <Button
-          position={'absolute'}
-          right={0}
-          bg={'blackAlpha.700'}
-          _hover={{ background: 'blackAlpha.700' }}
-          onClick={onOpen}
-        >
-          {!isOpen && <HamburgerIcon color={'white'} fontSize='3xl' />}
-        </Button>
+        <Flex alignItems={'center'}>
+          <Container>
+            <Image
+              src='/infightLogoComplete.png'
+              alt='Home Logo'
+              objectFit={'scale-down'}
+              width='300px'
+              mt={'2'}
+            />
+          </Container>
+          <Spacer />
+          <Button
+            right={0}
+            bg={'blackAlpha.700'}
+            _hover={{ background: 'blackAlpha.700' }}
+            onClick={onOpen}
+          >
+            {!isOpen && <HamburgerIcon color={'white'} fontSize='3xl' />}
+          </Button>
+        </Flex>
         <Drawer onClose={onClose} isOpen={isOpen} size='full'>
           <DrawerOverlay />
           <DrawerContent bgColor={'black'}>
@@ -98,7 +112,6 @@ export const Layout = ({ children }: Props) => {
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-        aaa
       </Box>
       <main>{children}</main>
     </>
