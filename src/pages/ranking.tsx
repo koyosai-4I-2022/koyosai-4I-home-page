@@ -59,7 +59,7 @@ const RankingPage = () => {
               }
             }}
           >
-            <SearchIcon color='#6370EB' />
+            <SearchIcon color='#42B2DF' />
           </Button>
         </InputRightElement>
       </InputGroup>
@@ -71,11 +71,11 @@ const RankingPage = () => {
             ref={dataRefs.current[index]}
             tabIndex={0}
             borderColor={
-              focusIndex != null && focusIndex == index ? '#6370EB' : 'black'
+              focusIndex != null && focusIndex == index ? '#42B2DF' : 'black'
             }
             borderWidth={3}
           >
-            <Circle bg='#6370EB' size='50px' color='white' m='2%'>
+            <Circle bg='#42B2DF' size='50px' color='white' m='2%'>
               <Text as='b' fontSize={'3xl'}>
                 {userData.rank}
               </Text>
