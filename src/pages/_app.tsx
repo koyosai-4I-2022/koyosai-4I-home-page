@@ -11,6 +11,12 @@ const theme = extendTheme({
       },
       colors: {},
     },
+    Heading: {
+      baseStyle: {
+        color: 'white',
+      },
+      colors: {},
+    },
   },
   styles: {
     global: () => ({
