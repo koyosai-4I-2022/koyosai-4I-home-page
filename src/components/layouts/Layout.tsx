@@ -78,7 +78,7 @@ export const Layout = ({ children }: Props) => {
                     </Link>
                   </ListItem>
                   <ListItem>
-                    <Link href='/ranking' passHref>
+                    <Link href='/about' passHref>
                       <a onClick={onClose}>
                         <Box>
                           <ListIcon as={MinusIcon} color='#6370EB' />
