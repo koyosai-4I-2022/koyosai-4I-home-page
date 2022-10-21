@@ -71,7 +71,7 @@ export const Layout = ({ children }: Props) => {
                     <Link href='/' passHref>
                       <a onClick={onClose}>
                         <Box>
-                          <ListIcon as={MinusIcon} color='#6370EB' />
+                          <ListIcon as={MinusIcon} color='#42B2DF' />
                           Home
                         </Box>
                       </a>
@@ -81,7 +81,7 @@ export const Layout = ({ children }: Props) => {
                     <Link href='/about' passHref>
                       <a onClick={onClose}>
                         <Box>
-                          <ListIcon as={MinusIcon} color='#6370EB' />
+                          <ListIcon as={MinusIcon} color='#42B2DF' />
                           About
                         </Box>
                       </a>
@@ -91,7 +91,7 @@ export const Layout = ({ children }: Props) => {
                     <Link href='/ranking' passHref>
                       <a onClick={onClose}>
                         <Box>
-                          <ListIcon as={MinusIcon} color='#6370EB' />
+                          <ListIcon as={MinusIcon} color='#42B2DF' />
                           Play Score
                         </Box>
                       </a>
@@ -101,7 +101,7 @@ export const Layout = ({ children }: Props) => {
                     <Link href='/ranking' passHref>
                       <a onClick={onClose}>
                         <Box>
-                          <ListIcon as={MinusIcon} color='#6370EB' />
+                          <ListIcon as={MinusIcon} color='#42B2DF' />
                           System
                         </Box>
                       </a>

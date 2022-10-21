@@ -3,7 +3,7 @@ import { Box, Container, Heading, Stack, Text } from '@chakra-ui/react';
 const AboutPage = () => {
   return (
     <Container mt={3}>
-      <Heading as='h1' size='2xl' color='#6370EB'>
+      <Heading as='h1' size='2xl' color='#42B2DF'>
         About
       </Heading>
       <Stack fontWeight='bold' fontSize='2xl' mt={5} spacing={9}>
