@@ -35,7 +35,7 @@ const RankingPage = () => {
         </InputGroup>
         {[...Array(10)].map(i => {
           return (
-            <Flex alignItems='center'>
+            <Flex key={i} alignItems='center'>
               <SkeletonCircle
                 size='50px'
                 m='2%'
