@@ -5,6 +5,7 @@ import { Ranking } from 'type/ranking';
 import useSWR from 'swr';
 import React, { useState, useRef, createRef, RefObject } from 'react';
 
+import { Skeleton, SkeletonCircle } from '@chakra-ui/react';
 import { fetcher } from 'fetcher';
 
 const RankingPage = () => {
@@ -14,7 +15,60 @@ const RankingPage = () => {
   const dataRefs = useRef<RefObject<HTMLInputElement>[]>([]);
   const [isButtonclick, setIsButtonclick] = useState(false);
   if (error) return 'error';
-  if (!data) return 'Loading...';
+  if (!data) {
+    return (
+      <Box>
+        <InputGroup
+          size='lg'
+          width='95%'
+          bg='white'
+          ml='2.5%'
+          mt='2.5%'
+          borderRadius='50%'
+        >
+          <Input placeholder='名前を入力してください' />
+          <InputRightElement width='4.5rem'>
+            <Button h='1.75rem' bg='white' size='lg'>
+              <SearchIcon color='#6370EB' />
+            </Button>
+          </InputRightElement>
+        </InputGroup>
+        {[...Array(10)].map(i => {
+          return (
+            <Flex key={i} alignItems='center'>
+              <SkeletonCircle
+                size='50px'
+                m='2%'
+                startColor='white.500'
+                endColor='gray.500'
+              >
+                <Circle size='50px' m='2%'>
+                  <Text as='b' fontSize={'3xl'}>
+                    1
+                  </Text>
+                </Circle>
+              </SkeletonCircle>
+              <Box>
+                <Skeleton startColor='white.500' endColor='gray.500'>
+                  <Text as='b' fontSize={'3xl'}>
+                    PLMWA
+                  </Text>
+                </Skeleton>
+              </Box>
+              <Spacer />
+              <Box mr='1%'>
+                <Skeleton startColor='white.500' endColor='gray.500'>
+                  <Text as='b' fontSize={'3xl'}>
+                    100
+                  </Text>
+                </Skeleton>
+              </Box>
+            </Flex>
+          );
+        })}
+      </Box>
+    );
+  }
   data.forEach((_, index) => {
     dataRefs.current[index] = createRef<HTMLInputElement>();
   });
