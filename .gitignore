@@ -34,3 +34,7 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# 3D model & texure
+*.fbx
+public/tex.png
