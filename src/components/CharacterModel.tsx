@@ -3,7 +3,6 @@ import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import { Loader, OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { TextureLoader } from 'three';
 import { Suspense } from 'react';
-import { Spinner } from '@chakra-ui/react';
 
 const Scene = () => {
   const fbx = useLoader(FBXLoader, '/Volinier-motion2.fbx');
