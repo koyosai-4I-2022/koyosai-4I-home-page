@@ -172,6 +172,7 @@ const RankingPage = () => {
           size='50'
           bottom={5}
           right={10}
+          cursor='pointer'
           onClick={() => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
