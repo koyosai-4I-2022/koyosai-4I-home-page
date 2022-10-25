@@ -95,6 +95,19 @@ const RankingPage = () => {
           onChange={e => {
             setInputName(e.target.value);
           }}
+          onKeyPress={e => {
+            if (e.key == 'Enter') {
+              const i = data.findIndex(r => inputName == r.name);
+              if (i) {
+                dataRefs.current[i].current?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'center',
+                });
+                setFocusIndex(i);
+                setIsButtonclick(true);
+              }
+            }
+          }}
         />
         <InputRightElement width='4.5rem'>
           <Button
@@ -103,7 +116,7 @@ const RankingPage = () => {
             size='lg'
             onClick={() => {
               const i = data.findIndex(r => inputName == r.name);
-              if (i) {
+              if (i != -1) {
                 dataRefs.current[i].current?.scrollIntoView({
                   behavior: 'smooth',
                   block: 'center',
