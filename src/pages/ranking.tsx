@@ -33,7 +33,7 @@ const RankingPage = () => {
             </Button>
           </InputRightElement>
         </InputGroup>
-        {[...Array(10)].map(i => {
+        {[...Array(10)].map((_, i) => {
           return (
             <Flex key={i} alignItems='center'>
               <SkeletonCircle
