@@ -1,6 +1,6 @@
 import { Box, Circle, Flex, Spacer, Text, Button } from '@chakra-ui/react';
 import { Input, InputGroup, InputRightElement } from '@chakra-ui/react';
-import { SearchIcon } from '@chakra-ui/icons';
+import { ArrowUpIcon, SearchIcon } from '@chakra-ui/icons';
 import { Ranking } from 'type/ranking';
 import useSWR from 'swr';
 import React, { useState, useRef, createRef, RefObject } from 'react';
@@ -84,6 +84,7 @@ const RankingPage = () => {
             setIsButtonclick(false);
           }
         }}
+        position='relative'
       >
         <InputGroup
           size='lg'
@@ -165,6 +166,19 @@ const RankingPage = () => {
             </Flex>
           );
         })}
+        <Circle
+          position={'fixed'}
+          bg='#42B2DF'
+          size='50'
+          bottom={5}
+          right={10}
+          cursor='pointer'
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+        >
+          <ArrowUpIcon color='white' fontSize={30} />
+        </Circle>
       </Box>
     </Layout>
   );
