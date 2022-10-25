@@ -1,7 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import { extendTheme } from '@chakra-ui/react';
-import { Layout } from 'components/layouts/Layout';
 
 const theme = extendTheme({
   components: {
