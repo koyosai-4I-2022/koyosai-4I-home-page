@@ -30,9 +30,9 @@ const Home: NextPage = () => {
     <Box position='relative'>
       <Overlay zIndex={3} position='absolute' />
       <HamburgerMenu position='fixed' zIndex={5} />
-      <Container position='absolute' top={150} zIndex={4} right={0}>
+      <Container position='absolute' top={100} zIndex={4} right={0}>
         <Image
-          src='infightLogoComplete.png'
+          src='infightLogoComplete2.png'
           alt='home'
           objectFit={'scale-down'}
           mr={0}
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         />
       </Container>
       <AspectRatio ratio={{ base: 9 / 16, lg: 16 / 9 }}>
-        <Image src='keyvisual-high-quality.png' alt='home' objectFit={'fill'} />
+        <Image src='withmosaic.png' alt='home' objectFit={'fill'} />
       </AspectRatio>
     </Box>
   );
