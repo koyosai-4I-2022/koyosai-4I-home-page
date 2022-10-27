@@ -1,38 +1,30 @@
 import { Canvas, useLoader } from '@react-three/fiber';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
-import { Loader, OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import { TextureLoader } from 'three';
-import { Suspense } from 'react';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
-const Scene = () => {
-  const fbx = useLoader(FBXLoader, '/Volinier-motion2.fbx');
-  const colorMap = useLoader(TextureLoader, '/tex.png');
-  console.log(fbx);
+type Props = {
+  url: string;
+};
+
+const Scene = ({ url }: Props) => {
+  const fbx = useLoader(FBXLoader, url);
   return (
     <>
-      <primitive
-        object={fbx}
-        map={colorMap}
-        scale={0.06}
-        position={[0, -5, 0]}
-      />
+      <primitive object={fbx} scale={0.06} position={[0, -5, 0]} />
       <ambientLight intensity={0.1} />
       <directionalLight color='red' position={[0, 0, 5]} />
     </>
   );
 };
 
-export const CharacterModel = () => {
+export const CharacterModel = ({ url }: Props) => {
   return (
     <>
       <Canvas>
-        <Suspense fallback={null}>
-          <Scene />
-          <PerspectiveCamera position={[0, 0, 0]} />
-          <OrbitControls autoRotate={true} />
-        </Suspense>
+        <Scene url={url} />
+        <PerspectiveCamera position={[0, 0, 0]} />
+        <OrbitControls autoRotate={true} />
       </Canvas>
-      <Loader />
     </>
   );
 };
