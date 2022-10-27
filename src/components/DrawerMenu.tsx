@@ -91,7 +91,7 @@ export const DrawerMenu = ({ isOpen, onClose }: Props) => {
                         borderBottom: 'solid',
                         borderBottomColor: 'white',
                       }}
-                      width='28%'
+                      width='fit-content'
                     >
                       <Text>Instagram</Text>
                       <ExternalLinkIcon color='#42B2DF' />
