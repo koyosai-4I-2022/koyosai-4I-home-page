@@ -1,7 +1,8 @@
-import { CloseIcon, MinusIcon } from '@chakra-ui/icons';
+import { CloseIcon, MinusIcon, ExternalLinkIcon } from '@chakra-ui/icons';
 import Link from 'next/link';
 import {
   Box,
+  Text,
   Button,
   Container,
   Drawer,
@@ -11,6 +12,7 @@ import {
   List,
   ListIcon,
   ListItem,
+  HStack,
 } from '@chakra-ui/react';
 
 type Props = {
@@ -77,6 +79,23 @@ export const DrawerMenu = ({ isOpen, onClose }: Props) => {
                       <ListIcon as={MinusIcon} color='#42B2DF' />
                       System
                     </Box>
+                  </a>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href='https://www.instagram.com/koyosai_4i/'>
+                  <a onClick={onClose} target='_blank'>
+                    <HStack
+                      gap={1}
+                      _hover={{
+                        borderBottom: 'solid',
+                        borderBottomColor: 'white',
+                      }}
+                      width='28%'
+                    >
+                      <Text>Instagram</Text>
+                      <ExternalLinkIcon color='#42B2DF' />
+                    </HStack>
                   </a>
                 </Link>
               </ListItem>
