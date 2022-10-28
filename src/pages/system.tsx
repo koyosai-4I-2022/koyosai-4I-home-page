@@ -6,6 +6,7 @@ import {
   Image,
   Center,
   HStack,
+  keyframes,
 } from '@chakra-ui/react';
 import { SmallAddIcon } from '@chakra-ui/icons';
 import { Layout } from 'components/layouts/Layout';
@@ -22,10 +23,27 @@ const ListItem = ({ item }: Props) => {
   );
 };
 
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 const SystemPage = () => {
   return (
     <Layout>
-      <Container mt={3}>
+      <Container
+        mt={3}
+        css={{
+          animationName: `${fadeIn}`,
+          animationDuration: '1s',
+          animationFillMode: 'forwards',
+        }}
+      >
         <Heading size='2xl' color='#42B2DF'>
           System
         </Heading>
