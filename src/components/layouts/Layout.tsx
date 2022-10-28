@@ -9,6 +9,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
+import { useRouter } from 'next/router';
 import { DrawerMenu } from 'components/DrawerMenu';
 
 type Props = {
@@ -17,11 +18,17 @@ type Props = {
 
 export const Layout = ({ children }: Props) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const router = useRouter();
   return (
     <>
       <Box position={'relative'}>
         <Flex alignItems={'center'}>
-          <Container>
+          <Container
+            onClick={() => {
+              router.push('/');
+            }}
+            cursor='pointer'
+          >
             <Image
               src='/infightLogoComplete.png'
               alt='Home Logo'
