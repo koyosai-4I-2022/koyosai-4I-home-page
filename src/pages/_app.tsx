@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import { extendTheme } from '@chakra-ui/react';
+import Head from 'next/head';
 
 const theme = extendTheme({
   components: {
@@ -28,9 +29,14 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
+    <>
+      <Head>
+        <link rel='shortcut icon' href='/android-icon-192x192.png' />
+      </Head>
+      <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
   );
 }
 export default MyApp;
