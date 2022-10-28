@@ -48,10 +48,6 @@ const SystemPage = () => {
           </HStack>
           <HStack>
             <SmallAddIcon color='#42B2DF' />
-            <Text>JoyconLib</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
             <Text>Adobe Mixamo</Text>
           </HStack>
           <Text borderBottom='2px' borderColor='gray.500'>
