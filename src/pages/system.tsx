@@ -9,6 +9,19 @@ import {
 } from '@chakra-ui/react';
 import { SmallAddIcon } from '@chakra-ui/icons';
 import { Layout } from 'components/layouts/Layout';
+
+type Props = {
+  item: string;
+};
+const ListItem = ({ item }: Props) => {
+  return (
+    <HStack>
+      <SmallAddIcon color='#42B2DF' />
+      <Text>{item}</Text>
+    </HStack>
+  );
+};
+
 const SystemPage = () => {
   return (
     <Layout>
@@ -29,27 +42,12 @@ const SystemPage = () => {
             ゲーム自体を開発している。プレイヤーの動作、内部判定、ゲームルールやUIなどを設計、開発する
           </Text>
           <Text>技術構成</Text>
+          <ListItem item='Unity 2020.3.36f1' />
+          <ListItem item='C#' />
+          <ListItem item='JoyconLib' />
+          <ListItem item='Strix Cloud' />
+          <ListItem item='Adobe Mixamo' />
 
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Unity 2020.3.36f1</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>C#</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>JoyconLib</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Strix Cloud</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Adobe Mixamo</Text>
-          </HStack>
           <Text borderBottom='2px' borderColor='gray.500'>
             スコアサーバ
           </Text>
@@ -57,19 +55,9 @@ const SystemPage = () => {
             ゲームのスコアを記録するサーバとしてユーザとスコアを管理している。ゲームクライアントとWebページでランキングを確認できるようにするためにサーバが存在している
           </Text>
           <Text>技術構成</Text>
-
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Amazon ECS</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>FastAPI</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>PostgreSQL</Text>
-          </HStack>
+          <ListItem item='Amazon ECS' />
+          <ListItem item='FastAPI' />
+          <ListItem item='PostgreSQL' />
           <Text borderBottom='2px' borderColor='gray.500'>
             ホームページ
           </Text>
@@ -77,19 +65,9 @@ const SystemPage = () => {
             個人ごとのランキングとスコアを確認したり、ゲームの内容を知ることができる。
           </Text>
           <Text>技術構成</Text>
-
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>NEXT.js</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Vercel</Text>
-          </HStack>
-          <HStack>
-            <SmallAddIcon color='#42B2DF' />
-            <Text>Chakra UI</Text>
-          </HStack>
+          <ListItem item='NEXT.js' />
+          <ListItem item='Vercel' />
+          <ListItem item='Chakra UI' />
         </Stack>
       </Container>
     </Layout>
