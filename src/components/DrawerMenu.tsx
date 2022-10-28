@@ -73,7 +73,7 @@ export const DrawerMenu = ({ isOpen, onClose }: Props) => {
                 </Link>
               </ListItem>
               <ListItem>
-                <Link href='/ranking' passHref>
+                <Link href='/system' passHref>
                   <a onClick={onClose}>
                     <Box>
                       <ListIcon as={MinusIcon} color='#42B2DF' />
