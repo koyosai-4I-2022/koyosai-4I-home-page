@@ -25,13 +25,13 @@ const fadeIn = keyframes`
 
 const AboutPage = () => {
   const [url, setUrl] = useState<string | null>(null);
-  const firestorage = getStorage(app);
-  const gsReference = ref(
-    firestorage,
-    'gs://koyosai-4i-home-page.appspot.com/Volinier-motion2.fbx',
-  );
 
   useEffect(() => {
+    const firestorage = getStorage(app);
+    const gsReference = ref(
+      firestorage,
+      'gs://koyosai-4i-home-page.appspot.com/Volinier-motion2.fbx',
+    );
     getDownloadURL(gsReference).then(url => setUrl(url));
   }, []);
 
