@@ -170,7 +170,7 @@ const RankingPage = () => {
           position={'fixed'}
           bg='#42B2DF'
           size='50'
-          bottom={5}
+          bottom={100}
           right={10}
           cursor='pointer'
           onClick={() => {

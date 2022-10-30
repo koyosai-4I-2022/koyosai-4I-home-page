@@ -11,6 +11,7 @@ import {
 import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import { DrawerMenu } from 'components/DrawerMenu';
+import { FooterBody } from 'components/FooterBody';
 
 type Props = {
   children: ReactNode;
@@ -50,6 +51,7 @@ export const Layout = ({ children }: Props) => {
         <DrawerMenu onClose={onClose} isOpen={isOpen} />
       </Box>
       <main>{children}</main>
+      <FooterBody />
     </>
   );
 };
