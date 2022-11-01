@@ -11,6 +11,7 @@ import { Layout } from 'components/layouts/Layout';
 import { useEffect, useState } from 'react';
 import { getStorage, getDownloadURL, ref } from 'firebase/storage';
 import { app } from 'lib/firebase';
+import { MovieModal } from 'components/MovieModal';
 
 const fadeIn = keyframes`
   from {
@@ -59,6 +60,7 @@ const AboutPage = () => {
           <Text>JoyCon を利用した直感的なゲームを楽しみましょう。</Text>
         </Stack>
       </Container>
+      <MovieModal></MovieModal>
     </Layout>
   );
 };
