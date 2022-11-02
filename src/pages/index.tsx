@@ -8,6 +8,7 @@ import {
 import { HamburgerMenu } from 'components/HambugerMenu';
 import { Overlay } from 'components/Overlay';
 import type { NextPage } from 'next';
+import { MovieModal } from 'components/MovieModal';
 
 const animateKeyFrames = keyframes`
   0% {opacity: 0;}
@@ -42,6 +43,7 @@ const Home: NextPage = () => {
       <AspectRatio ratio={{ base: 9 / 16, lg: 16 / 9 }}>
         <Image src='withmosaic.png' alt='home' objectFit={'fill'} />
       </AspectRatio>
+      <MovieModal></MovieModal>
     </Box>
   );
 };
