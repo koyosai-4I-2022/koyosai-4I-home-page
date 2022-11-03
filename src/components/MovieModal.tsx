@@ -8,8 +8,7 @@ import {
   useDisclosure,
   AspectRatio,
 } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
-import { RGBADepthPacking } from 'three';
+import { useEffect } from 'react';
 
 export const MovieModal = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
@@ -41,7 +40,7 @@ export const MovieModal = () => {
           <AspectRatio maxW='560px' ratio={1}>
             <iframe
               title='mv'
-              src='https://www.youtube.com/embed/H08YWE4CIFQ'
+              src='https://www.youtube.com/embed/wUZJdsbCWj8'
               allowFullScreen
             />
           </AspectRatio>
