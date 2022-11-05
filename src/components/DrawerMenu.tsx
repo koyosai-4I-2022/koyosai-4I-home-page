@@ -63,16 +63,16 @@ export const DrawerMenu = ({ isOpen, onClose }: Props) => {
                 </Link>
               </ListItem>
               <ListItem>
-                {/* <Link href='/ranking' passHref> */}
-                {/* <a onClick={onClose}> */}
-                <Box cursor={'not-allowed'} color='gray.500'>
-                  {' '}
-                  {/* remove when release */}
-                  <ListIcon as={MinusIcon} color='gray.500' />
-                  Play Score
-                </Box>
-                {/* </a> */}
-                {/* </Link> */}
+                <Link href='/ranking' passHref>
+                  <a onClick={onClose}>
+                    <Box /*cursor={'not-allowed'} color='gray.500'*/>
+                      {' '}
+                      {/* remove when release */}
+                      <ListIcon as={MinusIcon} color='#42B2DF' />
+                      Play Score
+                    </Box>
+                  </a>
+                </Link>
               </ListItem>
               <ListItem>
                 <Link href='/system' passHref>
@@ -96,6 +96,23 @@ export const DrawerMenu = ({ isOpen, onClose }: Props) => {
                       width='fit-content'
                     >
                       <Text>Instagram</Text>
+                      <ExternalLinkIcon color='#42B2DF' />
+                    </HStack>
+                  </a>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href='https://www.instagram.com/koyosai_4i/'>
+                  <a onClick={onClose} target='_blank'>
+                    <HStack
+                      gap={1}
+                      _hover={{
+                        borderBottom: 'solid',
+                        borderBottomColor: 'white',
+                      }}
+                      width='fit-content'
+                    >
+                      <Text>Booking Site</Text>
                       <ExternalLinkIcon color='#42B2DF' />
                     </HStack>
                   </a>
