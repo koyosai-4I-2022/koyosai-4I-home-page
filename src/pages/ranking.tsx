@@ -152,7 +152,11 @@ const RankingPage = () => {
                   {userData.rank}
                 </Text>
               </Circle>
-              <Box>
+              <Box
+                overflow='hidden'
+                whiteSpace={'nowrap'}
+                textOverflow='ellipsis'
+              >
                 <Text as='b' fontSize={'3xl'}>
                   {userData.name}
                 </Text>
